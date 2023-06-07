@@ -8,7 +8,7 @@ AutoFaceIT provides an automated solution to streamline the process of launching
 
 The script designed to automate the launching of Counter-Strike: Global Offensive (CSGO) with FaceIT Anti-Cheat. It ensures that CSGO is closed, launches FaceIT Anti-Cheat if it is not already running, and then launches CSGO again. The script is continuously monitors the CSGO and FaceIT Anti-Cheat processes to maintain the desired state.
 
-The script will run as a system service, so it will automatically start whenever your computer is turned on.
+The script will run as a system service. This is to ensure that the script will automatically launch when the computer is turned up, and you don't need to worry about it running.
 
 ## Features:
 - Automatic restart of CSGO when FaceIT Anti-Cheat is launched.
@@ -20,12 +20,17 @@ The script will run as a system service, so it will automatically start whenever
 
 - Python 3.x installed (The included bat file will check if Python is installed, and will install it if it's missing)
 
-## Usage
+## Installation
 
 1. [Download the package]
-2. Unzip the downloaded folder onto a location of your choicing
+2. Unzip the downloaded folder onto a location of your choicing.
 3. Run Install.bat
-4. That's it, the program is now running actively on your computer
+4. That's it, the program is now running actively on your computer.
+
+## Uninstallation
+
+1. Run the Uninstall.bat file.
+2. The script is now uninstalled, and all traces of the script are removed.
 
 ## Logging
 
