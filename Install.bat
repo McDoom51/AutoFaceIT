@@ -38,6 +38,17 @@ if %errorLevel% NEQ 0 (
     echo Python installation completed.
 )
 
+REM Install required Python libraries
+echo Installing required Python libraries...
+pip install psutil
+pip install subprocess.run
+pip install logging
+if %errorLevel% NEQ 0 (
+    echo Failed to install required libraries. Exiting...
+    pause
+    exit /b
+)
+
 REM Get the source path as the current directory
 set "source=%~dp0AutoFaceIT.py"
 
