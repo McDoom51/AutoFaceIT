@@ -8,7 +8,7 @@ AutoFaceIT provides an automated solution to streamline the process of launching
 
 The script designed to automate the launching of Counter-Strike: Global Offensive (CSGO) with FaceIT Anti-Cheat. It ensures that CSGO is closed, launches FaceIT Anti-Cheat if it is not already running, and then launches CSGO again. The script is continuously monitors the CSGO and FaceIT Anti-Cheat processes to maintain the desired state.
 
-The script will run as a system service. This is to ensure that the script will automatically launch when the computer is turned up, and you don't need to worry about it running.
+The script will run as a system service. This is to ensure that the script will automatically launch when the computer is turned on, so you don't need to worry about it.
 
 ## Features:
 - Automatic restart of CSGO when FaceIT Anti-Cheat is launched.
