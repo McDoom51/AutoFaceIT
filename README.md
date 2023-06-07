@@ -1,6 +1,7 @@
 <h1 align="center">AutoFaceIT</h1>
 
-![GitHub all releases](https://img.shields.io/github/downloads/McDoom51/AutoFaceIT/total?style=for-the-badge) 
+![GitHub all releases](https://img.shields.io/github/downloads/McDoom51/AutoFaceIT/total?style=for-the-badge)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mcdoom51/autofaceit/main?style=for-the-badge)
 ![Depfu](https://img.shields.io/depfu/dependencies/github/mcdoom51/autofaceit?style=for-the-badge)
 ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/mcdoom51/autofaceit?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/mcdoom51/autofaceit?style=for-the-badge)
