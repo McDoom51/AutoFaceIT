@@ -2,8 +2,6 @@
 
 ![GitHub all releases](https://img.shields.io/github/downloads/McDoom51/AutoFaceIT/total?style=for-the-badge)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mcdoom51/autofaceit/main?style=for-the-badge)
-![Depfu](https://img.shields.io/depfu/dependencies/github/mcdoom51/autofaceit?style=for-the-badge)
-![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/mcdoom51/autofaceit?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/mcdoom51/autofaceit?style=for-the-badge)
 
 AutoFaceIT is a Python script designed to automate the launching of Counter-Strike: Global Offensive (CSGO) with FaceIT Anti-Cheat. It ensures that CSGO is closed, launches FaceIT Anti-Cheat if it is not already running, and then launches CSGO again. The script continuously monitors the CSGO and FaceIT Anti-Cheat processes to maintain the desired state.
