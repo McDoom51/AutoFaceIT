@@ -39,10 +39,10 @@ if %errorLevel% NEQ 0 (
 )
 
 REM Get the source path as the current directory
-set "source=%~dp0your_script.py"
+set "source=%~dp0AutoFaceIT.py"
 
 REM Set the destination path
-set "destination=C:\AutoFaceIT\your_script.py"
+set "destination=C:\AutoFaceIT\AutoFaceIT.py"
 
 REM Move the script to the destination folder
 move "%source%" "%destination%"
