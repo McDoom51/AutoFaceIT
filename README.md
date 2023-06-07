@@ -31,6 +31,8 @@ AutoFaceIT provides an automated solution to streamline the process of launching
 
 The script logs events and errors to a `script.log` file. You can check this log file for information on the script's execution, including any errors that may occur.
 
+If you need help with the error, please open a [ticket](https://github.com/McDoom51/AutoFaceIT/issues/new) with the log file
+
 ## Contributing
 
 Contributions to AutoFaceIT are welcome! If you have any improvements, bug fixes, or new features to propose, please submit a pull request.
