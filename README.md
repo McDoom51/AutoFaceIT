@@ -18,14 +18,14 @@ AutoFaceIT provides an automated solution to streamline the process of launching
 
 ## Prerequisites
 
-- Python 3.x installed (The included bat file will check if Python is installed, else it will install Python by itself)
+- Python 3.x installed (The included bat file will check if Python is installed, and will install it if it's missing)
 
 ## Usage
 
 1. [Download the package]
 2. Unzip the downloaded folder onto a location of your choicing
 3. Run Install.bat
-4. 
+4. That's it, the program is now running actively on your computer
 
 ## Logging
 
