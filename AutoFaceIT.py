@@ -4,12 +4,33 @@ import subprocess
 import os
 import logging
 
-# Configure logging
-logging.basicConfig(filename='script.log', level=logging.INFO)
+def create_logs_folder():
+    script_path = os.path.dirname(os.path.abspath(__file__))
+    logs_folder = os.path.join(script_path, "Logs")
+    if not os.path.exists(logs_folder):
+        os.makedirs(logs_folder)
+    return logs_folder
+
+def create_logger(logs_folder):
+    current_time = time.strftime("%H%M%S")
+    current_date = time.strftime("%Y%m%d")
+    log_filename = f"{current_time}_{current_date}_errorlog.log"
+    log_filepath = os.path.join(logs_folder, log_filename)
+
+    logger = logging.getLogger("AutoFaceIT")
+    logger.setLevel(logging.ERROR)
+
+    formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+
+    file_handler = logging.FileHandler(log_filepath)
+    file_handler.setFormatter(formatter)
+    logger.addHandler(file_handler)
+
+    return logger
 
 def check_process_running(process_name):
-    for process in psutil.process_iter(['name']):
-        if process.info['name'] == process_name:
+    for process in psutil.process_iter(["name"]):
+        if process.info["name"] == process_name:
             return True
     return False
 
@@ -26,26 +47,26 @@ def find_executable(executable_name):
     return None
 
 def launch_faceit_anticheat():
-    faceit_anticheat_path = find_executable('faceit_anticheat.exe')
+    faceit_anticheat_path = find_executable("faceit_anticheat.exe")
     if faceit_anticheat_path:
         try:
             subprocess.run(faceit_anticheat_path, shell=True)
-            logging.info("FaceIT Anti-Cheat launched.")
+            logger.info("FaceIT Anti-Cheat launched.")
         except Exception as e:
-            logging.error("An error occurred while launching FaceIT Anti-Cheat: " + str(e))
+            logger.error("An error occurred while launching FaceIT Anti-Cheat: " + str(e))
     else:
-        logging.error("FaceIT Anti-Cheat executable not found.")
+        logger.error("FaceIT Anti-Cheat executable not found.")
 
 def launch_csgo():
-    csgo_path = find_executable('csgo.exe')
+    csgo_path = find_executable("csgo.exe")
     if csgo_path:
         try:
             subprocess.run(csgo_path, shell=True)
-            logging.info("CSGO launched.")
+            logger.info("CSGO launched.")
         except Exception as e:
-            logging.error("An error occurred while launching CSGO: " + str(e))
+            logger.error("An error occurred while launching CSGO: " + str(e))
     else:
-        logging.error("CSGO executable not found.")
+        logger.error("CSGO executable not found.")
 
 def monitor_csgo():
     csgo_running = False
@@ -56,59 +77,62 @@ def monitor_csgo():
         faceit_anticheat_process = None
 
         # Check CSGO process
-        for process in psutil.process_iter(['name']):
-            if process.info['name'] == 'csgo.exe':
+        for process in psutil.process_iter(["name"]):
+            if process.info["name"] == "csgo.exe":
                 csgo_process = process
                 break
 
         # Check FaceIT Anti-Cheat process
-        for process in psutil.process_iter(['name']):
-            if process.info['name'] == 'faceit_anticheat.exe':
+        for process in psutil.process_iter(["name"]):
+            if process.info["name"] == "faceit_anticheat.exe":
                 faceit_anticheat_process = process
                 break
 
         if csgo_process:
             if csgo_running:
-                logging.debug("CSGO already running. Skipping closure and anti-cheat launch.")
+                logger.debug("CSGO already running. Skipping closure and anti-cheat launch.")
             else:
-                logging.info("CSGO launched. Closing CSGO...")
-                close_process('csgo.exe')
+                logger.info("CSGO launched. Closing CSGO...")
+                close_process("csgo.exe")
                 time.sleep(5)  # Give time for CSGO to fully close
                 csgo_running = True
 
         if faceit_anticheat_process:
             if faceit_anticheat_running:
-                logging.debug("FaceIT Anti-Cheat already running.")
+                logger.debug("FaceIT Anti-Cheat already running.")
             else:
-                logging.info("FaceIT Anti-Cheat launched.")
+                logger.info("FaceIT Anti-Cheat launched.")
                 faceit_anticheat_running = True
 
         if not csgo_running and not faceit_anticheat_running:
-            logging.info("Launching CSGO...")
+            logger.info("Launching CSGO...")
             launch_csgo()
 
         time.sleep(5)  # Check for CSGO and FaceIT Anti-Cheat every 5 seconds
 
 def main():
+    logs_folder = create_logs_folder()
+    logger = create_logger(logs_folder)
+
     try:
         while True:
             steam_process = None
 
             # Check Steam process
-            for process in psutil.process_iter(['name', 'exe']):
-                if process.info['name'] == 'steam.exe' and 'steam' in process.info['exe'].lower():
+            for process in psutil.process_iter(["name", "exe"]):
+                if process.info["name"] == "steam.exe" and "steam" in process.info["exe"].lower():
                     steam_process = process
                     break
 
             if steam_process:
                 cmdline = steam_process.cmdline()
-                if 'csgo.exe' in cmdline:
-                    logging.info("CSGO launched from Steam. Monitoring CSGO...")
+                if "csgo.exe" in cmdline:
+                    logger.info("CSGO launched from Steam. Monitoring CSGO...")
                     monitor_csgo()
 
             time.sleep(5)  # Check for Steam and CSGO every 5 seconds
     except Exception as e:
-        logging.error("An error occurred: " + str(e))
+        logger.error("An error occurred: " + str(e))
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
