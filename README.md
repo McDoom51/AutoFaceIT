@@ -19,8 +19,8 @@ The script will run as a system service. This is to ensure that the script will 
 
 ## Features:
 - Automatic restart of CSGO when FaceIT Anti-Cheat is launched.
-- Launching of FaceIT Anti-Cheat if it is not already running.
-- Launching of CSGO when FaceIT Anti-Cheat is running.
+   - Launching of FaceIT Anti-Cheat if it is not already running.
+   - Launching of CSGO when FaceIT Anti-Cheat is running.
 - Continuous monitoring of CSGO and FaceIT Anti-Cheat.
 
 ## Prerequisites
