@@ -49,6 +49,7 @@ When this is done, the program is now actively on your computer and working.
 ## Uninstallation
 
 1. Run the Uninstall.bat file.
+> The file is located in the same folder as the program
 2. The script is now uninstalled, and all traces of the script are removed.
 
 ## Logging
