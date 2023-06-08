@@ -1,10 +1,11 @@
 
 <h1 align="center">AutoFaceIT</h1>
 
-
 ![GitHub all releases](https://img.shields.io/github/downloads/McDoom51/AutoFaceIT/total?style=for-the-badge)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mcdoom51/autofaceit/main?style=for-the-badge)
 ![GitHub issues](https://img.shields.io/github/issues/mcdoom51/autofaceit?style=for-the-badge)
+
+---
 
 AutoFaceIT provides an automated solution to streamline the process of launching CSGO with FaceIT Anti-Cheat, enhancing the convenience and user experience for players.
 
