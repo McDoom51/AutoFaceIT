@@ -17,6 +17,9 @@ The script designed to automate the launching of Counter-Strike: Global Offensiv
 
 The script will run as a system service. This is to ensure that the script will automatically launch when the computer is turned on, so you don't need to worry about it.
 
+The script have been repackaged into an executable, after the script can't be run as a system service otherwise.
+There is a released package that contains the script file, so you can build the executable yourself.
+
 ## Features:
 - Automatic restart of CSGO when FaceIT Anti-Cheat is launched.
    - Launching of FaceIT Anti-Cheat if it is not already running.
@@ -29,10 +32,19 @@ The script will run as a system service. This is to ensure that the script will 
 
 ## Installation
 
-1. [Download the package]
-2. Unzip the downloaded folder onto a location of your choicing.
-3. Run Install.bat
-4. That's it, the program is now running actively on your computer.
+- Easy Installation
+   1. [Download the package]()
+   2. Unzip the downloaded folder onto a location of your choicing.
+   3. Run Install.bat
+ 
+ - Build the program yourself
+   1. [Download the package]()
+   2. Unzip the downloaded folder onto a location of your choicing.
+   3. [Download py2exe]()
+   4. Build the package accordingly to the provided documentation in the downloaded folder.
+   5. Run Install.bat
+
+When this is done, the program is now actively on your computer and working.
 
 ## Uninstallation
 
