@@ -1,5 +1,9 @@
-
-<h1 align="center">AutoFaceIT</h1>
+<div>
+   <h1 align="center">
+     <img height="32" width="32" src="https://cdn.simpleicons.org/faceit/FF5500"/>
+     AutoFaceIT
+  </h1>
+</div>
 
 ![GitHub all releases](https://img.shields.io/github/downloads/McDoom51/AutoFaceIT/total?style=for-the-badge)
 ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/mcdoom51/autofaceit/main?style=for-the-badge)
