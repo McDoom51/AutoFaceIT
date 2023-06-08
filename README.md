@@ -28,7 +28,8 @@ There is a released package that contains the script file, so you can build the 
 
 ## Prerequisites
 
-- Python 3.x installed (The included bat file will check if Python is installed, and will install it if it's missing)
+- Python 3.x installed 
+   > The included bat file will check if Python is installed, and will install it if it's missing
 
 ## Installation
 
