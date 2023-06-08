@@ -1,7 +1,7 @@
 <div>
    <h1 align="center">
      <img height="32" width="32" src="https://cdn.simpleicons.org/faceit/FF5500"/>
-     AutoFaceIT
+     <strong>AutoFaceIT</strong>
   </h1>
 </div>
 
