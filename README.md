@@ -56,7 +56,7 @@ When this is done, the program is now actively on your computer and working.
 
 The script logs events and errors to a `script.log` file. You can check this log file for information on the script's execution, including any errors that may occur.
 
-If you need help with the error, please open a [ticket](https://github.com/McDoom51/AutoFaceIT/issues/new) with the log file
+If you need help with an error, please open a [ticket](https://github.com/McDoom51/AutoFaceIT/issues/new) with the log file
 
 ## Contributing
 
